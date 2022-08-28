@@ -1,0 +1,65 @@
+
+   <!DOCTYPE html>
+   <html lang="en">
+   
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+   </head>
+   
+   <body>
+       <form>
+           Num1: <input type="text" id="num1">
+           <br>
+           <br>
+           Num 2: <input type="text" id="num2">
+           <br>
+           <br>
+           <button type="submit" onclick="add(); return false"> + </button>
+           &nbsp;
+           <button type="submit" onclick="subtract(); return false "> - </button>
+           &nbsp;
+           <button type="submit" onclick="multiply(); return false "> * </button>
+           &nbsp;
+           <button type="submit" onclick="divide(); return false "> / </button>
+           &nbsp;
+   
+       </form>
+       <h2 id="result"></h2>
+       <script>
+           function add() {
+               document.querySelector('#result').innerHTML = +document.querySelector('#num1').value + +document.querySelector('#num2').value;
+           }
+           function subtract() {
+               document.querySelector('#result').innerHTML = +document.querySelector('#num1').value - +document.querySelector('#num2').value;
+   
+           } function multiply() {
+               let num1 = document.querySelector('#num1').value;
+               let num2 = document.querySelector('#num2').value;
+   
+               num1 = Number(num1);
+               num2 = Number(num2);
+   
+               let result = num1 * num2;
+   
+               document.querySelector('#result').innerHTML = result
+   
+           } function divide() {
+               let num1 = document.querySelector('#num1').value;
+               let num2 = document.querySelector('#num2').value;
+   
+               num1 = Number(num1);
+               num2 = Number(num2);
+   
+               let result = num1 / num2;
+   
+               document.querySelector('#result').innerHTML = result
+   
+           }
+       </script>
+   </body>
+   
+   </html> 
+   
